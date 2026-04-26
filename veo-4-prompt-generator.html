@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veo 4 Prompt Generator | Google Veo 4 Prompts and Examples</title>
+  <meta name="description" content="Generate better Veo 4 prompts for cinematic AI videos. Use prompt templates for camera motion, lighting, image references, audio-ready scenes, and video styles.">
+  <link rel="canonical" href="https://veo4ai.github.io/veo-4-prompt-generator.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Veo 4 Prompt Generator | Google Veo 4 Prompts and Examples">
+  <meta property="og:description" content="Generate structured Veo 4 prompts for cinematic AI videos, image references, camera motion, lighting, and audio-ready scenes.">
+  <meta property="og:url" content="https://veo4ai.github.io/veo-4-prompt-generator.html">
+  <meta property="og:site_name" content="Veo4AI">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Veo 4 Prompt Generator | Google Veo 4 Prompts and Examples">
+  <meta name="twitter:description" content="Use prompt templates and examples for Google Veo 4 AI video workflows.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What is a Veo 4 prompt generator?","acceptedAnswer":{"@type":"Answer","text":"A Veo 4 prompt generator is a lightweight tool that combines subject, motion, camera, style, lighting, and output details into a structured AI video prompt."}},
+      {"@type":"Question","name":"Does this prompt generator call an API?","acceptedAnswer":{"@type":"Answer","text":"No. This static page uses browser JavaScript to assemble a prompt locally and does not call an external API."}},
+      {"@type":"Question","name":"What makes a good Veo 4 prompt?","acceptedAnswer":{"@type":"Answer","text":"A good prompt includes subject, action, scene, camera movement, lighting, style, duration, aspect ratio, and audio-ready atmosphere."}},
+      {"@type":"Question","name":"Can I use these prompts for image-to-video?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add a reference image and specify what should remain stable and what should move."}},
+      {"@type":"Question","name":"How long should a Veo 4 prompt be?","acceptedAnswer":{"@type":"Answer","text":"Most useful prompts are concise but complete, often one paragraph with enough visual and motion detail to guide the generation."}},
+      {"@type":"Question","name":"Should I include camera motion?","acceptedAnswer":{"@type":"Answer","text":"Yes. Camera motion such as push-in, tracking, orbit, handheld, or locked-off framing gives the video a clearer temporal plan."}},
+      {"@type":"Question","name":"Can prompts include audio direction?","acceptedAnswer":{"@type":"Answer","text":"Yes. Audio-ready prompts can include ambience, dialogue intent, sound effects, and music mood, though final support depends on the provider."}},
+      {"@type":"Question","name":"Can I use generated prompts commercially?","acceptedAnswer":{"@type":"Answer","text":"The prompt text can be reused, but commercial rights for generated videos depend on the platform and model terms used to create the final output."}},
+      {"@type":"Question","name":"What is a good Veo 4 prompt?","acceptedAnswer":{"@type":"Answer","text":"A good Veo 4 prompt clearly defines subject, action, setting, camera motion, lighting, style, aspect ratio, duration, and audio-ready direction."}},
+      {"@type":"Question","name":"How do I write camera motion in a Veo 4 prompt?","acceptedAnswer":{"@type":"Answer","text":"Use concrete camera verbs such as push-in, tracking shot, orbit, handheld follow, crane up, locked-off frame, or macro dolly."}},
+      {"@type":"Question","name":"Can I use image references in Veo 4 prompts?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add what the image should preserve, such as identity, product shape, logo placement, wardrobe, composition, or color palette."}},
+      {"@type":"Question","name":"How do I make Veo 4 videos look cinematic?","acceptedAnswer":{"@type":"Answer","text":"Use camera language, shot size, lighting direction, composition, mood, lens feel, and clean output constraints instead of vague style words alone."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/">Veo4AI</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/veo-4-free.html">Free</a>
+      <a class="active" href="/veo-4-prompt-generator.html" aria-current="page">Prompt Generator</a>
+      <a href="/#examples">Examples</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero prompt-hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Google Veo 4 prompt guide</span>
+        <h1>Veo 4 Prompt Generator</h1>
+        <p class="hero-subtitle">Generate better Veo 4 prompts for cinematic AI videos using structured inputs for subject, motion, camera movement, visual style, lighting, and audio-ready scene direction.</p>
+        <div class="hero-actions">
+          <a class="button button-secondary" href="/">Veo 4 AI Video Generator</a>
+          <a class="button button-secondary" href="veo-4-free.html">Veo 4 Free</a>
+        </div>
+      </div>
+      <section class="tool-panel prompt-tool" aria-label="Prompt generator UI">
+        <div class="panel-topline">
+          <strong>Prompt Builder</strong>
+          <span>No API required</span>
+        </div>
+        <div class="input-grid">
+          <label>Subject input<input id="subjectInput" type="text" placeholder="A luxury electric bike on a rain-slick street"></label>
+          <label>Motion input<input id="motionInput" type="text" placeholder="glides forward while neon reflections move across the frame"></label>
+          <label>Camera input<input id="cameraInput" type="text" placeholder="low-angle tracking shot, slow push-in"></label>
+          <label>Style dropdown
+            <select id="styleSelect">
+              <option>Cinematic commercial</option>
+              <option>Documentary realism</option>
+              <option>Anime style</option>
+              <option>UGC handheld</option>
+              <option>Luxury product film</option>
+            </select>
+          </label>
+          <label>Lighting dropdown
+            <select id="lightingSelect">
+              <option>soft golden hour lighting</option>
+              <option>high-contrast studio lighting</option>
+              <option>neon night lighting</option>
+              <option>natural window light</option>
+              <option>moody cinematic rim light</option>
+            </select>
+          </label>
+        </div>
+        <label class="field-label" for="outputPrompt">Output prompt textarea</label>
+        <textarea id="outputPrompt" readonly placeholder="Your generated Veo 4 prompt will appear here..."></textarea>
+        <div class="prompt-actions">
+          <button class="button button-primary" id="generatePrompt" type="button">Generate Prompt</button>
+          <button class="button button-secondary" id="copyPrompt" type="button">Copy Prompt</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="content-section" id="prompt-examples">
+      <h2>Veo 4 Prompt Examples</h2>
+      <p>Use these Veo 4 prompts as practical starting points for the <a href="/">Veo 4 AI Video Generator</a>, free tests on the <a href="veo-4-free.html">Veo 4 Free</a> page, or your own cinematic AI video workflow.</p>
+      <div class="prompt-example-grid">
+        <article><h3>Cinematic Product Video</h3><p>A brushed titanium smartwatch rotates above a dark glass pedestal, slow macro push-in, high-contrast studio lighting, crisp reflections, luxury product film, 4 seconds, 16:9, audio-ready with a soft electronic pulse.</p><div><span>text-to-video</span><span>product</span><span>camera motion</span></div></article>
+        <article><h3>Fashion Video</h3><p>A model wearing a white sculptural coat walks through a concrete gallery, fabric moving gently, low-angle tracking shot, soft skylight, editorial fashion film, 8 seconds, 9:16.</p><div><span>fashion</span><span>vertical</span><span>cinematic</span></div></article>
+        <article><h3>Travel Shot</h3><p>A small boat crosses a turquoise bay at sunrise, aerial forward motion, warm haze, cinematic travel documentary style, 8 seconds, 16:9, audio-ready with distant waves and soft strings.</p><div><span>travel</span><span>wide shot</span><span>audio-ready</span></div></article>
+        <article><h3>Food Commercial</h3><p>A spoon breaks the surface of glossy chocolate mousse, extreme macro shot, slow push-in, warm restaurant lighting, premium food commercial, 4 seconds, 1:1.</p><div><span>food</span><span>macro</span><span>commercial</span></div></article>
+        <article><h3>TikTok Short</h3><p>A desk setup transforms from messy to clean in one smooth motion, fast overhead camera move, bright natural light, satisfying creator video, 4 seconds, 9:16.</p><div><span>social</span><span>9:16</span><span>hook</span></div></article>
+        <article><h3>UGC Ad</h3><p>A creator picks up a compact blender in a kitchen and smiles toward camera, natural handheld movement, window light, authentic UGC ad style, 8 seconds, 9:16.</p><div><span>UGC</span><span>ad</span><span>handheld</span></div></article>
+        <article><h3>Real Estate Walkthrough</h3><p>Use the uploaded living room image as the exact interior reference, preserve furniture layout and wall color, slow stabilized walkthrough from doorway to window, bright natural daylight, premium real estate tour, 8 seconds, 16:9.</p><div><span>image reference</span><span>real estate</span><span>walkthrough</span></div></article>
+        <article><h3>Anime Style Scene</h3><p>Use the reference character design for face, hair, and outfit consistency, the character turns under falling cherry blossoms, gentle side tracking camera, soft pastel anime film style, 8 seconds, 16:9.</p><div><span>anime</span><span>character</span><span>style</span></div></article>
+        <article><h3>Character Consistency</h3><p>Preserve the uploaded character face shape, jacket, and hairstyle, show the character stepping into a neon subway station, medium tracking shot, moody cinematic lighting, 8 seconds, 9:16.</p><div><span>image-to-video</span><span>consistency</span><span>portrait</span></div></article>
+        <article><h3>Image Reference Video</h3><p>Animate the product photo with a slow clockwise turntable motion, keep logo readable and proportions unchanged, add soft studio reflections, luxury ecommerce video, 4 seconds, 1:1.</p><div><span>image reference</span><span>product</span><span>ecommerce</span></div></article>
+        <article><h3>Camera Tracking Shot</h3><p>A runner moves through a rain-lit alley, camera tracks backward at chest height, neon reflections, realistic cinematic thriller style, 8 seconds, 16:9.</p><div><span>tracking shot</span><span>motion</span><span>cinematic</span></div></article>
+        <article><h3>Audio-Ready Scene</h3><p>A chef plates a steaming bowl of ramen in a narrow Tokyo kitchen, slow handheld close-up, warm tungsten light, documentary realism, 8 seconds, 16:9, audio-ready with simmering broth and quiet street ambience.</p><div><span>audio-ready</span><span>food</span><span>documentary</span></div></article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Generate Better Veo 4 Prompts</h2>
+      <p>The Veo 4 Prompt Generator is a simple browser tool for turning rough ideas into stronger Google Veo 4 prompt drafts. It does not call an API and it does not generate video by itself. Instead, it helps you assemble the ingredients that usually matter most in AI video: subject, motion, camera, lighting, style, format, and audio-ready atmosphere. This is useful whether you plan to test Veo 4 free access, compare providers, or prepare a paid generation brief.</p>
+      <p>Good Veo 4 prompts are not long for the sake of being long. They are specific. A strong prompt tells the model what the viewer should see, how the subject should move, how the camera should move, what the lighting feels like, and what kind of final video you want. That structure is especially important for cinematic product videos, image reference videos, character consistency, UGC ads, and short-form social clips where a small change in camera or pacing can change the whole result.</p>
+      <div class="feature-grid compact-feature-grid">
+        <article><h3>Start with Subject and Action</h3><p>Name the subject, setting, and visible action before adding style words.</p></article>
+        <article><h3>Add Motion, Camera and Lighting</h3><p>Use camera verbs, shot size, and lighting direction to control the scene.</p></article>
+        <article><h3>Define Output Format and Style</h3><p>Finish with aspect ratio, duration, platform, realism level, and audio notes.</p></article>
+      </div>
+    </section>
+
+    <section class="content-section split-section">
+      <div>
+        <h2>Veo 4 Prompt Template</h2>
+        <p>Use this template as a starting point: “A [subject] in [setting], [subject motion], [camera movement and shot size], [lighting and color], [style], [duration and aspect ratio], audio-ready with [ambience, music, or sound cues].” For image-to-video, add: “Use the reference image to preserve [identity, product shape, logo, wardrobe, composition, or color palette].”</p>
+        <p>This format keeps the prompt readable while still giving enough creative direction. It is also easy to iterate. If the first clip has weak motion, change only the motion and camera phrase. If the subject is unstable, strengthen the reference and consistency phrase. If the output feels flat, adjust lighting, lens language, or atmosphere rather than rewriting the whole prompt.</p>
+        <div class="prompt-parts">
+          <h3>Subject</h3><h3>Motion</h3><h3>Camera</h3><h3>Lighting</h3><h3>Audio-Ready Scene Direction</h3>
+        </div>
+      </div>
+      <div class="template-card">
+        <strong>Prompt formula</strong>
+        <p>Subject + setting + motion + camera + lighting + style + format + audio-ready notes</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Text to Video Prompt Examples</h2>
+      <p>Text-to-video prompts work best when the scene is self-contained. The following examples are written to be direct enough for a generator while still leaving room for visual interpretation.</p>
+      <div class="example-list">
+        <article><h3>Cinematic Text to Video Prompt</h3><p>A brushed titanium smartwatch rotates above a dark glass pedestal, slow macro push-in, high-contrast studio lighting, crisp reflections, luxury product film, 4 seconds, 16:9, audio-ready with a soft electronic pulse.</p></article>
+        <article><h3>Product Text to Video Prompt</h3><p>A matte black speaker vibrates with visible bass on a clean desk, slow push-in camera, soft blue rim light, premium tech commercial, 4 seconds, 16:9.</p></article>
+        <article><strong>Fashion video:</strong> A model wearing a white sculptural coat walks through a concrete gallery, fabric moving gently, low-angle tracking shot, soft skylight, editorial fashion film, 8 seconds, 9:16.</article>
+        <article><strong>Travel shot:</strong> A small boat crosses a turquoise bay at sunrise, aerial forward motion, warm haze, cinematic travel documentary style, 8 seconds, 16:9, audio-ready with distant waves and soft strings.</article>
+        <article><strong>Food commercial:</strong> A spoon breaks the surface of glossy chocolate mousse, extreme macro shot, slow push-in, warm restaurant lighting, premium food commercial, 4 seconds, 1:1.</article>
+        <article><strong>TikTok short:</strong> A desk setup transforms from messy to clean in one smooth motion, fast overhead camera move, bright natural light, satisfying creator video, 4 seconds, 9:16.</article>
+        <article><strong>UGC ad:</strong> A creator picks up a compact blender in a kitchen and smiles toward camera, natural handheld movement, window light, authentic UGC ad style, 8 seconds, 9:16.</article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Image to Video Prompt Examples</h2>
+      <p>Image-to-video prompting adds a consistency layer. Tell the model what the reference image controls and what the animation should add.</p>
+      <div class="example-list">
+        <article><h3>Reference Image Prompt</h3><p>Use the uploaded living room image as the exact interior reference, preserve furniture layout and wall color, slow stabilized walkthrough from doorway to window, bright natural daylight, premium real estate tour, 8 seconds, 16:9.</p></article>
+        <article><h3>Character Consistency Prompt</h3><p>Preserve the uploaded character face shape, jacket, and hairstyle, show the character stepping into a neon subway station, medium tracking shot, moody cinematic lighting, 8 seconds, 9:16.</p></article>
+        <article><strong>Anime style scene:</strong> Use the reference character design for face, hair, and outfit consistency, the character turns under falling cherry blossoms, gentle side tracking camera, soft pastel anime film style, 8 seconds, 16:9.</article>
+        <article><strong>Character consistency:</strong> Preserve the uploaded character’s face shape, jacket, and hairstyle, show the character stepping into a neon subway station, medium tracking shot, moody cinematic lighting, 8 seconds, 9:16.</article>
+        <article><strong>Image reference video:</strong> Animate the product photo with a slow clockwise turntable motion, keep logo readable and proportions unchanged, add soft studio reflections, luxury ecommerce video, 4 seconds, 1:1.</article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Camera Motion and Cinematic Style Prompts</h2>
+      <p>Camera motion is one of the fastest ways to make a Veo 4 prompt more controllable. Use concrete camera verbs: push in, pull back, orbit, track left, crane up, handheld follow, locked-off frame, overhead tilt, or macro dolly. Pair the motion with shot size: wide establishing shot, medium shot, close-up, extreme macro, over-the-shoulder, or low-angle hero shot.</p>
+      <div class="example-list">
+        <article><h3>Tracking Shot Prompt</h3><p>A runner moves through a rain-lit alley, camera tracks backward at chest height, neon reflections, realistic cinematic thriller style, 8 seconds, 16:9.</p></article>
+        <article><h3>Slow Push-In Prompt</h3><p>A premium sneaker floats above a mirrored surface, slow push-in camera with a subtle orbit, sharp rim light, clean black background, high-end product film, 4 seconds, 16:9.</p></article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Audio-Ready Scene Prompt Ideas</h2>
+      <p>Audio-ready prompts describe what the scene should sound like even if the final generation workflow handles audio separately. Add details such as room tone, crowd ambience, footsteps, wind, machine hum, water droplets, music mood, or dialogue intent. The audio note helps the visual pacing feel more deliberate because it gives the scene a rhythm.</p>
+      <div class="example-list">
+        <article><h3>Dialogue-Ready Scene Prompt</h3><p>A founder stands beside a prototype on a workshop table, gentle push-in camera, natural window light, startup documentary style, audio-ready with a calm one-sentence product explanation and subtle room tone.</p></article>
+        <article><h3>Music Video Prompt</h3><p>A singer walks through a blue-lit tunnel, slow handheld follow shot, reflective floor, cinematic music video style, audio-ready with echoing footsteps and a low synth pulse.</p></article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Veo 4 Prompts for TikTok, Reels, Ads and Product Videos</h2>
+      <p>Short-form prompts need speed and clarity. The first second should show the subject and motion, the middle should deliver a visual payoff, and the end should loop or hold on a clean frame. For ads, include the product benefit visually rather than relying on text. For UGC, avoid over-polished studio language and use natural camera behavior, practical locations, and human scale.</p>
+      <p>For product videos, define the material and the benefit moment. A water bottle can bead with condensation, a bag can open to reveal organized compartments, a skincare product can glide across reflective tile, and an app interface can appear on a phone with a controlled parallax move. The best Veo 4 prompts make the value visible in motion.</p>
+      <p>When adapting one prompt across TikTok, Reels, ads, and product pages, change the format before changing the whole idea. A 9:16 creator hook may need handheld energy and a close subject, while a 16:9 product page video may need steadier movement, more negative space, and cleaner lighting for headlines or interface overlays.</p>
+      <div class="feature-grid compact-feature-grid">
+        <article><h3>TikTok and Reels Prompt</h3><p>Use a vertical hook, one visible action, and a repeatable final frame.</p></article>
+        <article><h3>UGC Ad Prompt</h3><p>Use creator framing, natural light, and a believable product benefit moment.</p></article>
+        <article><h3>Product Demo Prompt</h3><p>Show material, scale, feature reveal, and a clean end frame for reuse.</p></article>
+      </div>
+    </section>
+
+    <section class="content-section faq-section" id="faq">
+      <h2>Frequently Asked Questions About Veo 4 Prompts</h2>
+      <details open>
+        <summary>What is a Veo 4 prompt generator?</summary>
+        <p>It is a lightweight tool that assembles subject, motion, camera, style, lighting, and output details into a structured AI video prompt.</p>
+      </details>
+      <details>
+        <summary>Does this page use an API?</summary>
+        <p>No. The generator runs locally in your browser with simple JavaScript and does not connect to an external generation service.</p>
+      </details>
+      <details>
+        <summary>What makes a good Veo 4 prompt?</summary>
+        <p>A good prompt is specific about subject, motion, setting, camera, lighting, style, aspect ratio, duration, and audio-ready atmosphere.</p>
+      </details>
+      <details>
+        <summary>Can I use these prompts with image references?</summary>
+        <p>Yes. Add a reference image and specify which visual elements should remain consistent while the scene moves.</p>
+      </details>
+      <details>
+        <summary>How long should a prompt be?</summary>
+        <p>One compact paragraph is often enough if it includes the main production details. Avoid vague adjectives without visual direction.</p>
+      </details>
+      <details>
+        <summary>Should I include negative prompts?</summary>
+        <p>If a provider supports them, negative prompts can help exclude artifacts, extra limbs, distorted logos, unreadable text, or unwanted camera shake.</p>
+      </details>
+      <details>
+        <summary>Can prompts include audio direction?</summary>
+        <p>Yes. Add ambience, music mood, sound effects, or dialogue intent to create an audio-ready scene plan.</p>
+      </details>
+      <details>
+        <summary>Can I use the generated prompt commercially?</summary>
+        <p>You can reuse the prompt text, but rights for generated videos depend on the terms of the platform used to create the final clip.</p>
+      </details>
+      <details>
+        <summary>What is a good Veo 4 prompt?</summary>
+        <p>A good Veo 4 prompt clearly defines subject, action, setting, camera motion, lighting, style, aspect ratio, duration, and audio-ready direction.</p>
+      </details>
+      <details>
+        <summary>How do I write camera motion in a Veo 4 prompt?</summary>
+        <p>Use concrete camera verbs such as push-in, tracking shot, orbit, handheld follow, crane up, locked-off frame, or macro dolly.</p>
+      </details>
+      <details>
+        <summary>Can I use image references in Veo 4 prompts?</summary>
+        <p>Yes. Add what the image should preserve, such as identity, product shape, logo placement, wardrobe, composition, or color palette.</p>
+      </details>
+      <details>
+        <summary>How do I make Veo 4 videos look cinematic?</summary>
+        <p>Use camera language, shot size, lighting direction, composition, mood, lens feel, and clean output constraints instead of vague style words alone.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Veo4AI</strong>
+      <p>Veo4AI is an independent resource and is not affiliated with Google or Google DeepMind.</p>
+      <p>Last updated: 2026</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="/">Home</a>
+      <a href="veo-4-free.html">Veo 4 Free</a>
+      <a href="veo-4-prompt-generator.html">Veo 4 Prompt Generator</a>
+      <a href="sitemap.xml">Sitemap</a>
+    </nav>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/main.js"></script>
+</body>
+</html>
